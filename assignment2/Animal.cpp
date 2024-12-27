@@ -12,12 +12,18 @@ public:
 	void makeSound() {
 		cout << "Woof!" << endl;
 	}
+	~Dog() {
+		Delete this;
+	}
 };
 
 class Cat : public Animal {
 public:
 	void makeSound() {
-		cout << "Meow!" << endl;
+		cout << "Meow!" << endl;2
+	}
+	~Cat() {
+		Delete this;
 	}
 };
 
@@ -25,6 +31,9 @@ class Cow : public Animal {
 public:
 	void makeSound() {
 		cout << "Moo!" << endl;
+	}
+	~Cow() {
+		Delete this;
 	}
 };
 
@@ -35,10 +44,6 @@ int main() {
 
 	for (int i = 0; i < m; i++) {
 		animals[i] -> makeSound();
-	}
-
-	for (int i = 0; i < m; i++) {
-		delete animals[i];
 	}
 
 	return 0;
